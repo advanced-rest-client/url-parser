@@ -216,11 +216,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           result: 'http://domain.com/path/endpoint?${variable}=value&other=value&test-param=param-value'
         }, {
           url: 'http://domain.com/path/endpoint?param=${variable}=&other=value',
-          result: 'http://domain.com/path/endpoint?param=${variable}' +
+          result: 'http://domain.com/path/endpoint?param=${variable}=' +
             '&other=value&test-param=param-value'
         }, {
           url: '${variable}://${variable}:${variable}/${var}?${param}',
           result: '${variable}://${variable}:${variable}/${var}?${param}=&test-param=param-value'
+        }, {
+          url: 'https://domain.com/rest/action/?SessionKey=KjNsfHeNoC2seiep9T|HOcjRbsxtDlt9ZcyZ9z1g==|Ox7v3IUnMPJgBtDO3szndTGi/5zBY=&ContactCode=40024560',
+          result: 'https://domain.com/rest/action/?SessionKey=KjNsfHeNoC2seiep9T|HOcjRbsxtDlt9ZcyZ9z1g==|Ox7v3IUnMPJgBtDO3szndTGi/5zBY=&ContactCode=40024560&test-param=param-value'
         }];
 
         basics.forEach(function(item) {

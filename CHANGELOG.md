@@ -1,3 +1,13 @@
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/advanced-rest-client/url-parser/compare/0.1.1...0.1.2) (2017-11-16)
+
+
+### Fix
+
+* Fixes https://github.com/advanced-rest-client/arc-electron/issues/6 ([d8ee4034c81923a8b3dbb99fcf982c6143f71327](https://github.com/advanced-rest-client/url-parser/commit/d8ee4034c81923a8b3dbb99fcf982c6143f71327))
+
+
+
 <a name="0.1.1"></a>
 ## 0.1.1 (2017-10-31)
 

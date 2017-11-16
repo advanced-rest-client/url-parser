@@ -111,20 +111,17 @@
     result = parts.map(function(item) {
       var _part = ['', ''];
       var _params = item.split('=');
-      var _name = _params[0].trim();
-      if (_name) {
-        _part[0] = _name;
-      } else {
+      var _name = _params.shift();
+      if (!_name) {
         return;
       }
-      if (_params[1]) {
-        var _value = _params[1].trim();
-        if (_value) {
-          _part[1] = _value;
-        }
-      } else {
-        _params[1] = '';
+      _name = _name.trim();
+      if (!_name) {
+        return;
       }
+      var _value = _params.join('=').trim();
+      _part[0] = _name;
+      _part[1] = _value;
       return _part;
     });
     return result.filter(function(item) {
