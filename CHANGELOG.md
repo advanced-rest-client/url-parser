@@ -1,3 +1,9 @@
+<a name="0.1.4"></a>
+## [0.1.4](https://github.com/advanced-rest-client/url-parser/compare/0.1.3...0.1.4) (2018-02-11)
+
+
+
+
 <a name="0.1.3"></a>
 ## [0.1.3](https://github.com/advanced-rest-client/url-parser/compare/0.1.2...0.1.3) (2017-11-16)
 
