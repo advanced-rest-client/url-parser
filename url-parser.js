@@ -1,7 +1,11 @@
 (function(scope) {
   'use strict';
   var options = {};
-
+  /**
+   * Sets options on the parser.
+   *
+   * @param {[Object} opts Options to set.
+   */
   function setOptions(opts) {
     opts = opts || {};
     options.queryDelimiter = opts.queryDelimiter || '&';
@@ -20,7 +24,8 @@
   }
   /**
    * Gets a host value from the url.
-   * It reads the whole authority value of given `value`. It doesn't parses it to host, port and
+   * It reads the whole authority value of given `value`. It doesn't parses it
+   * to host, port and
    * credentials parts. For URL panel it's enough.
    *
    * @param {String} value The URL to parse
@@ -112,13 +117,10 @@
       var _part = ['', ''];
       var _params = item.split('=');
       var _name = _params.shift();
-      if (!_name) {
+      if (!_name && name !== '') {
         return;
       }
       _name = _name.trim();
-      if (!_name) {
-        return;
-      }
       var _value = _params.join('=').trim();
       _part[0] = _name;
       _part[1] = _value;
@@ -136,13 +138,10 @@
     }
     context.search = value.map(function(item) {
       if (!item[0] && !item[1]) {
-        return;
+        return '';
       }
       item[1] = item[1] || '';
       return item[0] + '=' + item[1];
-    })
-    .filter(function(item) {
-      return !!item;
     })
     .join(options.queryDelimiter);
   }
