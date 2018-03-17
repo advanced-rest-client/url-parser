@@ -12,20 +12,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
     <link rel="import" href="../url-parser.html">
   </head>
   <body>
-
     <script>
-    // ${variable}://host
-
-    /* global assert */
-    suite('parser', function() {
-
-      suite('properties parser', function() {
+    /* global UrlParser */
+    suite('parser', () => {
+      suite('properties parser', () => {
         var basics = [{
           url: 'http://domain.com',
           protocol: 'http:',
@@ -147,7 +142,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           anchor: undefined
         }];
 
-        basics.forEach(function(item) {
+        basics.forEach((item) => {
           test('Parsing properties for: ' + item.url, function() {
             var parser = new UrlParser(item.url);
 
@@ -160,7 +155,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         });
       });
 
-      suite('search params parser', function() {
+      suite('search params parser', () => {
         var basics = [{
           url: 'http://domain.com',
           params: []
@@ -187,7 +182,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           params: [['${param}', '']]
         }];
 
-        basics.forEach(function(item) {
+        basics.forEach((item) => {
           test('Parsing search params for: ' + item.url, function() {
             var parser = new UrlParser(item.url);
             assert.deepEqual(parser.searchParams, item.params);
@@ -195,7 +190,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         });
       });
 
-      suite('search params setter', function() {
+      suite('search params setter', () => {
         var basics = [{
           url: 'http://domain.com',
           result: 'http://domain.com/?test-param=param-value'
@@ -226,7 +221,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           result: 'https://domain.com/rest/action/?SessionKey=KjNsfHeNoC2seiep9T|HOcjRbsxtDlt9ZcyZ9z1g==|Ox7v3IUnMPJgBtDO3szndTGi/5zBY=&ContactCode=40024560&test-param=param-value'
         }];
 
-        basics.forEach(function(item) {
+        basics.forEach((item) => {
           test('Parsing search params for: ' + item.url, function() {
             var parser = new UrlParser(item.url);
             var params = parser.searchParams;
@@ -237,7 +232,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         });
       });
 
-      suite('toString()', function() {
+      suite('toString()', () => {
         var basics = [{
           url: 'http://domain.com',
           result: 'http://domain.com/'
@@ -271,9 +266,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           });
         });
       });
-
     });
     </script>
-
   </body>
 </html>
