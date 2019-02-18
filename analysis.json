@@ -5,7 +5,25 @@
       "description": "Implements logic for parsing URL string.",
       "summary": "",
       "path": "url-parser.js",
-      "properties": [],
+      "properties": [
+        {
+          "name": "opts",
+          "type": "Object",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 15,
+              "column": 2
+            },
+            "end": {
+              "line": 17,
+              "column": 3
+            }
+          },
+          "metadata": {}
+        }
+      ],
       "methods": [
         {
           "name": "_parseProtocol",
@@ -176,7 +194,7 @@
       "sourceRange": {
         "start": {
           "line": 3,
-          "column": 0
+          "column": 7
         },
         "end": {
           "line": 167,
@@ -190,7 +208,145 @@
       "description": "A class to parse URL string.",
       "summary": "",
       "path": "url-parser.js",
-      "properties": [],
+      "properties": [
+        {
+          "name": "opts",
+          "type": "Object",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 15,
+              "column": 2
+            },
+            "end": {
+              "line": 17,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "inheritedFrom": "UrlValueParser"
+        },
+        {
+          "name": "protocol",
+          "type": "(String | undefined)",
+          "description": "Returns protocol value in format `protocol` + ':'",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 188,
+              "column": 2
+            },
+            "end": {
+              "line": 190,
+              "column": 3
+            }
+          },
+          "metadata": {}
+        },
+        {
+          "name": "host",
+          "type": "(String | undefined)",
+          "description": "It reads the authority part of the URL value. It doesn't parses it\nto host, port and credentials parts.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 206,
+              "column": 2
+            },
+            "end": {
+              "line": 208,
+              "column": 3
+            }
+          },
+          "metadata": {}
+        },
+        {
+          "name": "path",
+          "type": "(String | undefined)",
+          "description": "Returns path part of the URL.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 223,
+              "column": 2
+            },
+            "end": {
+              "line": 225,
+              "column": 3
+            }
+          },
+          "metadata": {}
+        },
+        {
+          "name": "anchor",
+          "type": "(String | undefined)",
+          "description": "Returns anchor part of the URL.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 240,
+              "column": 2
+            },
+            "end": {
+              "line": 242,
+              "column": 3
+            }
+          },
+          "metadata": {}
+        },
+        {
+          "name": "search",
+          "type": "(String | undefined)",
+          "description": "Returns search part of the URL.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 257,
+              "column": 2
+            },
+            "end": {
+              "line": 259,
+              "column": 3
+            }
+          },
+          "metadata": {}
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "description": "The URL value. It is the same as calling `toStirng()`.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 273,
+              "column": 2
+            },
+            "end": {
+              "line": 275,
+              "column": 3
+            }
+          },
+          "metadata": {}
+        },
+        {
+          "name": "searchParams",
+          "type": "Array.<Array>",
+          "description": "Returns an array of search params.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 296,
+              "column": 2
+            },
+            "end": {
+              "line": 298,
+              "column": 3
+            }
+          },
+          "metadata": {}
+        }
+      ],
       "methods": [
         {
           "name": "_parseProtocol",
@@ -388,7 +544,7 @@
       "sourceRange": {
         "start": {
           "line": 171,
-          "column": 0
+          "column": 7
         },
         "end": {
           "line": 355,

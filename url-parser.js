@@ -1,7 +1,7 @@
 /**
  * Implements logic for parsing URL string.
  */
-class UrlValueParser {
+export class UrlValueParser {
   /**
    * @constructor
    * @param {?Object} opts
@@ -169,7 +169,7 @@ class UrlValueParser {
 /**
  * A class to parse URL string.
  */
-class UrlParser extends UrlValueParser {
+export class UrlParser extends UrlValueParser {
   /**
    * @constructor
    * @param {String} value URL value
