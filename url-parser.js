@@ -332,6 +332,7 @@ export class UrlParser extends UrlValueParser {
     }
     if (this.path) {
       if (this.path === '/' && !this.host && !this.search && !this.anchor) {
+        // ???
       } else {
         if (this.path[0] !== '/') {
           result += '/';
