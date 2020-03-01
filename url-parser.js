@@ -79,11 +79,14 @@ export class UrlValueParser {
     if (!value) {
       return;
     }
-    let index = value.indexOf('://');
-    if (index !== -1) {
-      value = value.substr(index + 3);
+    const isBasePath = value[0] === '/';
+    if (!isBasePath) {
+      const index = value.indexOf('://');
+      if (index !== -1) {
+        value = value.substr(index + 3);
+      }
     }
-    index = value.indexOf('?');
+    let index = value.indexOf('?');
     if (index !== -1) {
       value = value.substr(0, index);
     }
@@ -93,7 +96,9 @@ export class UrlValueParser {
     }
     const lastIsSlash = value[value.length - 1] === '/';
     const parts = value.split('/').filter((part) => !!part);
-    parts.shift();
+    if (!isBasePath) {
+      parts.shift();
+    }
     let path = '/' + parts.join('/');
     if (lastIsSlash && parts.length > 1) {
       path += '/';

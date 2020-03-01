@@ -139,7 +139,15 @@ suite('parser', () => {
         path: '/${var}',
         search: undefined,
         anchor: undefined
-      }
+      },
+      {
+        url: '/path/api?query=true#access_token=abc',
+        protocol: undefined,
+        host: '',
+        path: '/path/api',
+        search: 'query=true',
+        anchor: 'access_token=abc'
+      },
     ];
 
     basics.forEach((item) => {
@@ -285,6 +293,10 @@ suite('parser', () => {
       {
         url: '${variable}://',
         result: '${variable}://'
+      },
+      {
+        url: '/path/api?query=true',
+        result: '/path/api?query=true'
       }
     ];
 
