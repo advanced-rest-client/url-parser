@@ -1,7 +1,7 @@
 {
   "name": "@advanced-rest-client/url-parser",
   "description": "A polyfill library for URL class",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "license": "Apache-2.0",
   "main": "url-parser.js",
   "keywords": [
