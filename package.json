@@ -24,19 +24,19 @@
     "email": "arc@mulesoft.com"
   },
   "devDependencies": {
-    "@advanced-rest-client/eslint-config": "^1.1.2",
+    "@advanced-rest-client/eslint-config": "^1.1.4",
     "@advanced-rest-client/prettier-config": "^0.1.0",
-    "@advanced-rest-client/testing-karma-sl": "^1.0.4",
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^7.0.0",
-    "@open-wc/testing": "^2.3.3",
-    "@open-wc/testing-karma": "^3.1.29",
+    "@advanced-rest-client/testing-karma-sl": "^1.2.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@open-wc/testing": "^2.5.4",
+    "@open-wc/testing-karma": "^3.3.0",
     "@polymer/gen-typescript-declarations": "^1.6.2",
     "@polymer/iron-test-helpers": "^3.0.1",
-    "deepmerge": "^4.0.0",
-    "husky": "^1.0.0",
-    "lint-staged": "^9.2.5",
-    "sinon": "^7.4.2"
+    "deepmerge": "^4.2.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "sinon": "^9.0.0"
   },
   "scripts": {
     "test": "karma start --coverage",
